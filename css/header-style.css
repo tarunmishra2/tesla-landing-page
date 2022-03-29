@@ -1,0 +1,74 @@
+.header {
+  position: fixed;
+  width: 100%;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  font-size: 90%;
+}
+
+.header-nav {
+  position: relative;
+  display: flex;
+}
+
+.nav-slide {
+  position: absolute;
+  height: 90%;
+  width: 4.6rem;
+  padding: 0.2rem 0.25rem 0.3rem;
+  top: -0.2rem;
+  content: "";
+  left: 0;
+  z-index: -1;
+  border-radius: 0.8rem;
+  display: none;
+  background-color: rgba(58, 58, 58, 0.137);
+  transition: all 0.5s ease;
+  opacity: 0.6;
+}
+
+.header-nav a:hover ~ .nav-slide {
+  display: block;
+}
+
+.header-nav a:nth-child(1):hover ~ .nav-slide {
+  left: 0;
+}
+
+.header-nav a:nth-child(2):hover ~ .nav-slide {
+  left: 5.4rem;
+}
+
+.header-nav a:nth-child(3):hover ~ .nav-slide {
+  left: 10.6rem;
+}
+
+.header-nav a:nth-child(4):hover ~ .nav-slide {
+  left: 16rem;
+}
+
+.header-nav a:nth-child(5):hover ~ .nav-slide {
+  left: 21.2rem;
+  width: 6rem;
+}
+
+.header-nav a:nth-child(6):hover ~ .nav-slide {
+  left: 27.7rem;
+  width: 6.5rem;
+}
+
+.nav-mobile {
+  display: none;
+}

@@ -1,0 +1,183 @@
+:root {
+  --text-color: #292b30;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem;
+}
+
+.ml {
+  margin-left: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+#one {
+  background-image: url(/images/t1.jpg);
+}
+
+#two {
+  background-image: url(/images/t2.jpg);
+}
+
+#three {
+  background-image: url(/images/t3.jpg);
+}
+#four {
+  background-image: url(/images/t4.jpg);
+}
+
+#five {
+  background-image: url(/images/t5.jpg);
+}
+
+#six {
+  background-image: url(/images/t6.jpg);
+}
+
+#seven {
+  background-image: url(/images/t7.jpg);
+}
+
+.container-section {
+  height: 100vh;
+  color: #fff;
+  scroll-snap-align: start;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.container-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5rem 0 1rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.container-content-header h2 {
+  font-size: 2.5rem;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  background-color: white;
+  border: unset;
+  min-width: 16rem;
+  min-height: 2.5rem;
+  padding: 0.6rem 2rem;
+  text-transform: uppercase;
+  border-radius: 5rem;
+  font-size: 80%;
+  font-weight: 525;
+  margin: 0.8rem;
+}
+
+.btn-dark {
+  background-color: rgba(23, 26, 32, 0.8);
+  color: white;
+}
+
+.btn-light {
+  opacity: 0.8;
+}
+
+.container-content-footer {
+  margin: 11.5rem;
+  margin-left: 15rem;
+}
+
+.down-arrow {
+  left: 49%;
+  bottom: 1%;
+  position: absolute;
+  animation: scroll-down 1.5s ease infinte;
+  opacity: 0.25;
+  width: 50px;
+  height: auto;
+}
+
+/* ===== MENU OVERLAY ===== */
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  display: none;
+  justify-content: flex-end;
+  transition: all 0.5s ease;
+}
+
+.overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.overlay-menu {
+  background-color: white;
+  padding: 0 4.1rem;
+}
+
+.overlay-list {
+  list-style: none;
+  padding: 0;
+  font-weight: bolder;
+  opacity: 0.8;
+}
+
+.overlay-close {
+  padding: 2rem;
+  text-align: right;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0.7;
+  font-weight: 100;
+}
+
+.overlay-list li {
+  margin-bottom: 1rem;
+  display: list-item;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav,
+  .nav-main,
+  .nav-sub,
+  a {
+    display: none;
+  }
+  .nav-mobile {
+    display: block;
+  }
+  .container-content-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-content-footer .btn:first-child {
+    margin-bottom: 1rem;
+  }
+  .down-arrow {
+    display: none;
+  }
+}
